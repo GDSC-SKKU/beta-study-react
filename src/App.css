@@ -12,9 +12,9 @@
   flex-direction: column;
   /* row-gap: 20px; */
 
-  width: min-content;
+  align-items: left;
   margin: 0 auto;
-  padding: 100px 0 0;
+  padding: 100px 50px 0;
 
   /* height: 100vh; */
 }
