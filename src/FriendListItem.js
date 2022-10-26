@@ -12,6 +12,7 @@ function FriendListItem(props) {
       <div className="profile-text">
         <p className="profile-name">{/* 여기를 수정 */}</p>
         <p className="profile-message">{/* 여기를 수정 */}</p>
+        <p>아무 글자</p>
       </div>
     </div>
   );
