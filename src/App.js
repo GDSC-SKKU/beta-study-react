@@ -34,9 +34,10 @@ function App() {
         {FRIENDS_LIST.map((friend) => (
           <FriendListItem
             key={friend.id}
+            friendId={friend.id}
             imageSource={friend.imageSource}
             name={friend.name}
-            message={friend.name}
+            message={friend.message}
           />
         ))}
       </div>
