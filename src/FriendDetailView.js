@@ -49,6 +49,11 @@ const DetailViewProfileName = styled.p`
   font-weight: 900;
   font-size: 20px;
 `;
+const DetailViewProfileMessage = styled.p`
+  font-weight: 500;
+  font-size: 16px;
+  color: lightgray;
+`;
 
 const Button = styled.button`
   border-radius: 20px;
@@ -82,6 +87,9 @@ function FriendDetailView(props) {
       <DetailViewContentContainer>
         <DetailViewProfilePicture src={props.imageSource} />
         <DetailViewProfileName>{props.name}</DetailViewProfileName>
+        <DetailViewProfileMessage>
+          {props.message}&nbsp;
+        </DetailViewProfileMessage>
         <div
           css={css`
             display: flex;
