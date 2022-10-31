@@ -41,12 +41,18 @@ const DetailViewProfilePicture = styled.img`
   position: relative;
 `;
 
+const DetailViewProfileName = styled.p`
+  font-weight: 900;
+  font-size: 20px;
+`;
+
 const Button = styled.button`
   border-radius: 20px;
   background-color: transparent;
   color: inherit;
   border: 1px solid white;
   padding: 10px 20px;
+  font-weight: 900;
 `;
 
 const CloseButton = styled.button`
@@ -67,8 +73,8 @@ function FriendDetailView(props) {
       <DetailViewBackgroundImage src="/images/cover/cover_1.jpeg" alt="cover" />
       <CloseButton onClick={props.closeDetail}>X</CloseButton>
       <DetailViewContentContainer>
-        <DetailViewProfilePicture src="/images/profile/profile_1.jpg" />
-        <p>홍길동</p>
+        <DetailViewProfilePicture src={props.imageSource} />
+        <DetailViewProfileName>{props.name}</DetailViewProfileName>
         <div
           css={css`
             display: flex;
