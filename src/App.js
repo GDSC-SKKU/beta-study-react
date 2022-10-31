@@ -27,8 +27,9 @@ function App() {
     <div className="iphone-container">
       <div className="center-container">
         <h1 className="section-title">친구</h1>
-        {FRIENDS_LIST.map((friend) => (
+        {FRIENDS_LIST.map((friend, index) => (
           <FriendListItem
+            key={index}
             imageSource={friend.imageSource}
             name={friend.name}
             message={friend.name}
