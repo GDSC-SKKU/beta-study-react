@@ -11,13 +11,17 @@ const DetailViewContainer = styled.div`
   top: 10px;
   z-index: 2;
   border-radius: 50px;
-  background-color: lightgray;
+  background-color: black;
 `;
 
 const DetailViewBackgroundImage = styled.img`
-  width: 100%;
   z-index: 1;
   position: absolute;
+  object-fit: fill;
+  height: 150%;
+
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5));
+  opacity: 0.7;
 `;
 
 const DetailViewContentContainer = styled.div`
@@ -70,7 +74,10 @@ const CloseButton = styled.button`
 function FriendDetailView(props) {
   return (
     <DetailViewContainer>
-      <DetailViewBackgroundImage src="/images/cover/cover_1.jpeg" alt="cover" />
+      <DetailViewBackgroundImage
+        src={`/images/cover/cover_${props.friendId}.jpeg`}
+        alt="cover"
+      />
       <CloseButton onClick={props.closeDetail}>X</CloseButton>
       <DetailViewContentContainer>
         <DetailViewProfilePicture src={props.imageSource} />
