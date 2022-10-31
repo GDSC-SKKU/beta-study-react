@@ -5,6 +5,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 880px;
+  z-index: 10000;
 }
 
 .center-container {
