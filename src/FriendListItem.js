@@ -6,9 +6,15 @@ function FriendListItem(props) {
   // 친구 자세히 보기 창 띄우기
   const [showDetailView, setShowDetailView] = useState(false);
 
+  function closeDetail() {
+    setShowDetailView(false);
+  }
+
   return (
     <div className="profile-item">
-      {showDetailView && <FriendDetailView {...props} />}
+      {showDetailView && (
+        <FriendDetailView closeDetail={closeDetail} {...props} />
+      )}
       <img
         className="profile-image"
         src={props.imageSource}
