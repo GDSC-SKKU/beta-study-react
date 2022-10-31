@@ -1,0 +1,24 @@
+.iphone-container {
+  width: 440px;
+  background-image: url("../public/images/iphone_mockup.webp");
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 880px;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  /* row-gap: 20px; */
+
+  align-items: left;
+  margin: 0 auto;
+  padding: 100px 50px 0;
+
+  /* height: 100vh; */
+}
+
+#iphone-mockup {
+  position: fixed;
+}
