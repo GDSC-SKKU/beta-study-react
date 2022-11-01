@@ -80,15 +80,22 @@ function FriendDetailView(props) {
   return (
     <DetailViewContainer>
       <DetailViewBackgroundImage
-        src={`/images/cover/cover_${props.friendId}.jpeg`}
+        //이미지를 불러와 보세요!
+        // HINT: 이제 친구마다 고유한 friendId 값이 1 부터 4까지 부여되어 있어요!
+        // 파일명과 연결시켜 생각해 보세요!
+        // 예시 ) src={`/images/cover/...`}
         alt="cover"
       />
-      <CloseButton onClick={props.closeDetail}>X</CloseButton>
+      {/* 이 자리에 이미 정의된 CloseButton 스타일드 컴포넌트를 이용해 눌렀을 때 상세보기가 닫히는 버튼을 만들어 보세요! */}
+      {/* 예시: <CloseButton onClick=...>X</CloseButton> */}
       <DetailViewContentContainer>
         <DetailViewProfilePicture src={props.imageSource} />
-        <DetailViewProfileName>{props.name}</DetailViewProfileName>
+
+        <DetailViewProfileName>
+          {/* 친구 이름을 넣어보세요! */}
+        </DetailViewProfileName>
         <DetailViewProfileMessage>
-          {props.message}&nbsp;
+          {/* 친구의 상태 메시지를 넣어보세요! */}&nbsp;
         </DetailViewProfileMessage>
         <div
           css={css`
