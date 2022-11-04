@@ -9,9 +9,16 @@ function FriendListItem(props) {
         className="profile-image"
         ...
       /> */}
+      <img
+        src={process.env.PUBLIC_URL + `/images/profile/profile_${props.id}.jpg`}
+        alt=""
+        width="40px"
+        height="40px"
+        className="profile-image"
+      ></img>
       <div className="profile-text">
-        <p className="profile-name">{/* 여기를 수정 */}</p>
-        <p className="profile-message">{/* 여기를 수정 */}</p>
+        <p className="profile-name">{props.name}</p>
+        <p className="profile-message">{props.message}</p>
       </div>
     </div>
   );
